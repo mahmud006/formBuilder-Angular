@@ -1,0 +1,23 @@
+<div
+  class="questions"
+  (click)="edit($event); $event.stopPropagation()"
+  *ngIf="!clicked"
+>
+  <div class="ques">
+    <label id="example-radio-group-label"
+      >{{ ques?.questionId }}. {{ ques?.question }}</label
+    >
+    <div class="answer">
+      <mat-form-field class="example-full-width">
+        <input
+          matInput
+          placeholder="Enter your question"
+          value="Enter your answer"
+          disabled="true"
+        />
+      </mat-form-field>
+    </div>
+  </div>
+</div>
+<app-text *ngIf="clicked" (newItemEvent)="itemEvent()" [ques]="ques">
+</app-text>

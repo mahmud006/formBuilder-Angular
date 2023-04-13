@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&family=Segoe+WP&family=Tahoma&family=Arial&family=sans-serif&display=swap");
+body {
+  font-family: Segoe UI, Segoe WP, Tahoma, Arial, sans-serif !important;
+}
+mat-toolbar {
+  height: 44px;
+  font-size: 14px;
+  padding: 0 20px 0 40px;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+button {
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  /* border: none; */
+  padding: 5px 12px !important;
+  font-size: 14px;
+}
+.previewBtn,
+.styleBtn {
+  font-family: "Segoe UI", "Segoe WP", Tahoma, Arial, sans-serif, Roboto;
+
+  display: flex;
+  align-items: center;
+  border: none;
+  height: 44px;
+  background-color: rgb(255, 255, 255);
+}
+
+.material-symbols-outlined {
+  font-weight: 250;
+}
+.tools {
+  display: flex;
+  align-items: center;
+}
+.collectRes {
+  margin: 0 10px;
+  background-color: #03787c !important;
+}
+.optionBtn {
+  font-weight: 300;
+  cursor: pointer;
+}

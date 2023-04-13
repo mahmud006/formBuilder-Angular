@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+}
+.container {
+  padding-top: 35px;
+  padding-bottom: 30px;
+}
+.header {
+  margin: 0 30px;
+  font-size: 36px;
+  font-weight: 400;
+  padding: 24px 18px;
+  line-height: 48px;
+}
+.header:hover {
+  background-color: rgb(235, 235, 235);
+}
+.desc {
+  font-size: 14px;
+  margin-top: 30px;
+  line-height: 20px;
+}
+.example-full-width {
+  width: 98%;
+}
+.material-symbols-outlined {
+  opacity: 0.6;
+  margin-right: 10px;
+}

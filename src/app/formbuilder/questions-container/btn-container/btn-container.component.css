@@ -1,0 +1,50 @@
+.btnContainer {
+  padding: 16px 32px 16px 50px;
+}
+.material-symbols-outlined {
+  color: rgb(3, 120, 124);
+  margin-right: 7px;
+}
+
+.addBtn {
+  color: rgb(255, 255, 255);
+  background-color: rgb(3, 120, 124);
+  padding: 12px 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.addBtn .material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 250, "GRAD" -25, "opsz" 48;
+  margin-right: 5px;
+  color: rgb(255, 255, 255);
+}
+
+.btns {
+  background-color: rgb(3, 120, 124);
+  transform: scale(1);
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.btns button {
+  background-color: rgb(255, 255, 255);
+  border-radius: 0;
+  margin: 0 3px;
+  height: 30px;
+}
+.btns .material-symbols-outlined {
+  color: rgb(3, 120, 124);
+  font-size: 20px;
+}
+.addBtn.expanded {
+  padding: 20px 20px 20px 10px;
+}
+
+.expand .material-symbols-outlined {
+  font-size: 40px;
+  margin-top: 6px;
+}

@@ -1,0 +1,83 @@
+.question-form {
+  margin: 20px 30px;
+  font-weight: 400;
+  line-height: 48px;
+  background-color: rgb(245, 245, 245);
+  border-top: 4px solid #03787c;
+  border-radius: 3px;
+}
+/* .questions:hover {
+  background-color: rgb(235, 235, 235);
+} */
+
+.ques {
+  display: flex;
+  align-items: center;
+}
+.example-full-width {
+  width: 80%;
+}
+/* .example-full-width input {
+  height: 50%;
+} */
+.options {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+}
+.options span .example-full-width {
+  width: 180%;
+}
+.options .radio {
+  margin-right: 10px;
+  opacity: 0.5;
+  cursor: pointer;
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 48;
+}
+.options .material-symbols-outlined {
+  opacity: 0.7;
+}
+.question .upload {
+  opacity: 0.5;
+}
+
+/* options */
+.options .apps {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 36;
+  font-size: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.options .delete {
+  margin-left: 190px;
+  cursor: pointer;
+  font-size: 25px;
+  opacity: 0.5;
+}
+.btn-toggle {
+  display: none;
+  /* position: absolute; */
+}
+.options:hover .btn-toggle {
+  display: inline-block;
+}
+.optionBtn {
+  color: #03787c;
+  /* background-color: rgb(245, 245, 245); */
+}
+.optionDiv {
+  margin-left: 70px;
+}
+.optionDiv .option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+p {
+  margin: 0;
+}
+
+.optionDiv button {
+  background-color: rgb(245, 245, 245);
+}
+/* functionality btns */

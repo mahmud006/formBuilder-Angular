@@ -1,0 +1,59 @@
+<div class="question-form">
+  <app-top-icons [ques]="ques"></app-top-icons>
+  <form class="question">
+    <div class="ques">
+      <h2 style="margin: 0 30px 0 30px">
+        {{ ques?.questionId || mainService.questionId }}.
+      </h2>
+      <mat-form-field class="example-full-width">
+        <span matSuffix class="material-symbols-outlined upload">
+          save_as
+        </span>
+        <input
+          matInput
+          type="text"
+          placeholder="Enter your question"
+          [(ngModel)]="question"
+          (ngModelChange)="question = $event"
+          name="ques"
+        />
+      </mat-form-field>
+    </div>
+    <div class="options" *ngFor="let option of options; let idx = index">
+      <span class="material-symbols-outlined apps btn-toggle"> apps </span>
+      <span class="material-symbols-outlined radio">
+        radio_button_unchecked
+      </span>
+      <span>
+        <mat-form-field class="example-full-width">
+          <span matSuffix class="material-symbols-outlined upload">
+            save_as
+          </span>
+          <input
+            matInput
+            placeholder="Enter option"
+            [(ngModel)]="options[idx]"
+            (ngModelChange)="options[idx] = $event"
+            name="{{ idx }}"
+            [ngModelOptions]="{ updateOn: 'blur' }"
+          />
+        </mat-form-field>
+      </span>
+      <span class="material-symbols-outlined delete btn-toggle"> delete </span>
+    </div>
+
+    <div class="optionDiv">
+      <button mat-flat-button class="optionBtn" (click)="addOption()">
+        <div class="option">
+          <span class="material-symbols-sharp"> add </span>
+          <p>Add Option</p>
+        </div>
+      </button>
+      <button mat-flat-button class="optionBtn addOtherOption">
+        <p>Add "Other" option</p>
+      </button>
+    </div>
+  </form>
+  <mat-divider></mat-divider>
+  <app-functionality-btns></app-functionality-btns>
+</div>

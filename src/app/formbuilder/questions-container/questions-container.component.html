@@ -1,0 +1,38 @@
+<div class="spacer"></div>
+<div class="container">
+  <app-heading></app-heading>
+  <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+    <div
+      class="displayQuestionsContainer"
+      *ngFor="let ques of mainService.formData; let i = index"
+      cdkDrag
+    >
+      <app-display-mcq
+        *ngIf="ques.indicator == 'mcq'"
+        [ques]="ques"
+        (click)="edit()"
+      >
+      </app-display-mcq>
+      <app-display-text
+        *ngIf="ques.indicator == 'text'"
+        [ques]="ques"
+        (click)="edit()"
+      >
+      </app-display-text>
+    </div>
+  </div>
+  <app-mcq *ngIf="btnHandler.showMcqForm"> </app-mcq>
+
+  <app-display-mcq style="display: none"></app-display-mcq>
+
+  <app-text *ngIf="btnHandler.showTextForm"></app-text>
+  <app-display-text style="display: none"></app-display-text>
+
+  <app-rating *ngIf="btnHandler.showRatingForm"></app-rating>
+  <app-display-rating style="display: none"></app-display-rating>
+
+  <app-date *ngIf="btnHandler.showDateForm"></app-date>
+  <app-display-date style="display: none"></app-display-date>
+
+  <app-btn-container></app-btn-container>
+</div>

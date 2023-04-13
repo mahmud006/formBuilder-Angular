@@ -1,0 +1,91 @@
+<div class="btnContainer">
+  <button mat-flat-button class="addBtn" [ngClass]="{ expanded: isClicked }">
+    <div class="container">
+      <span class="material-symbols-outlined" (click)="isClicked = !isClicked">
+        add
+      </span>
+      <span class="add" *ngIf="!isClicked" (click)="isClicked = !isClicked"
+        >Add new</span
+      >
+
+      <div class="btns" *ngIf="isClicked">
+        <button
+          mat-flat-button
+          (click)="$event.stopPropagation(); btnHandler.showMcqForm = true"
+        >
+          <div class="container">
+            <span class="material-symbols-outlined">
+              radio_button_checked
+            </span>
+            <span class="add">Choice</span>
+          </div>
+        </button>
+        <button
+          mat-flat-button
+          (click)="$event.stopPropagation(); btnHandler.showTextForm = true"
+        >
+          <div class="container">
+            <span class="material-symbols-outlined"> title </span>
+            <span class="add">Text</span>
+          </div>
+        </button>
+        <button mat-flat-button (click)="btnHandler.showRatingForm = true">
+          <div class="container">
+            <span class="material-symbols-outlined"> thumb_up </span>
+            <span class="add">Rating</span>
+          </div>
+        </button>
+        <button mat-flat-button (click)="btnHandler.showDateForm = true">
+          <div class="container">
+            <span class="material-symbols-outlined"> calendar_month </span>
+            <span class="add">Date</span>
+          </div>
+        </button>
+        <button mat-flat-button [matMenuTriggerFor]="menu" class="expand">
+          <span class="material-symbols-outlined"> expand_more </span>
+          <div class="options">
+            <mat-menu #menu="matMenu" class="menu">
+              <button mat-menu-item>
+                <div class="container">
+                  <span
+                    class="material-symbols-outlined"
+                    style="color: rgb(3, 120, 124)"
+                  >
+                    swap_vert
+                  </span>
+                  <span>Ranking</span>
+                </div>
+              </button>
+              <button mat-menu-item>
+                <div class="container">
+                  <span class="material-symbols-outlined">
+                    shelf_position
+                  </span>
+                  <span>Likert</span>
+                </div>
+              </button>
+              <button mat-menu-item>
+                <div class="container">
+                  <span class="material-symbols-outlined"> upload_file </span>
+                  <span>Upload File</span>
+                </div>
+              </button>
+              <button mat-menu-item>
+                <div class="container">
+                  <span class="material-symbols-outlined"> network_check </span>
+                  <span>Net Promoter Score</span>
+                </div>
+              </button>
+              <button mat-menu-item>
+                <div class="container">
+                  <span class="material-symbols-outlined"> content_copy </span>
+                  <span>Section</span>
+                </div>
+              </button>
+            </mat-menu>
+          </div>
+        </button>
+      </div>
+    </div>
+  </button>
+</div>

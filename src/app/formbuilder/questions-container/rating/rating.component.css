@@ -1,0 +1,72 @@
+.questions {
+  margin: 20px 30px;
+  font-weight: 400;
+  line-height: 48px;
+  background-color: rgb(245, 245, 245);
+  border-top: 4px solid #03787c;
+  border-radius: 3px;
+}
+/* .questions:hover {
+  background-color: rgb(235, 235, 235);
+} */
+.question {
+  display: flex;
+  flex-direction: column;
+}
+.ques {
+  display: flex;
+  align-items: center;
+}
+.example-full-width {
+  width: 80%;
+}
+.question .upload {
+  opacity: 0.5;
+}
+/* stars */
+/* .stars {
+  opacity: 0.5;
+  margin-left: 77px;
+  display: inline;
+} */
+.stars {
+  margin-left: 77px;
+}
+.stars button {
+  border: none;
+  background-color: rgb(245, 245, 245);
+  cursor: pointer;
+}
+
+.stars .material-symbols-rounded {
+  font-size: 50px;
+  font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 48;
+  display: inline-block;
+  opacity: 0.5;
+  /* margin-left: 77px; */
+}
+/* functionality btns */
+.functionalityBtns {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.fnBtn {
+  margin-right: 20px;
+}
+.fnBtn .material-symbols-outlined {
+  margin-top: 20px;
+  opacity: 0.6;
+}
+
+/* options */
+.options {
+  display: flex;
+  justify-content: center;
+}
+p {
+  margin-right: 20px;
+}
+.symb {
+  margin-left: 20px;
+}

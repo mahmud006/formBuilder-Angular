@@ -1,0 +1,28 @@
+.questions {
+  margin: 20px 30px;
+  font-weight: 400;
+  line-height: 48px;
+  background-color: rgb(245, 245, 245);
+  border-top: 4px solid #03787c;
+  border-radius: 3px;
+}
+/* .questions:hover {
+  background-color: rgb(235, 235, 235);
+} */
+.question {
+  display: flex;
+  flex-direction: column;
+}
+.ques {
+  display: flex;
+  align-items: center;
+}
+.answer {
+  margin-left: 77.453px;
+}
+.example-full-width {
+  width: 80%;
+}
+.question .upload {
+  opacity: 0.5;
+}

@@ -1,0 +1,35 @@
+.material-symbols-rounded {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" -25, "opsz" 28;
+  font-size: 24px;
+  cursor: pointer;
+}
+mat-toolbar {
+  color: rgb(255, 255, 255);
+  height: 48px;
+  font-family: Segoe UI, Segoe WP, Tahoma, Arial, sans-serif;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+.header {
+  margin-left: 16px;
+  font-size: 15px;
+  font-family: SegoeUI-SemiBold-final, Segoe UI Semibold, SegoeUI-Regular-final,
+    Segoe UI, "Segoe UI Web (West European)", Segoe, -apple-system,
+    BlinkMacSystemFont, Roboto, Helvetica Neue, Tahoma, Helvetica, Arial,
+    sans-serif;
+}
+.headerText {
+  font-size: 14px;
+}
+
+.qs {
+  font-variation-settings: "FILL" 0, "wght" 200, "GRAD" -25, "opsz" 48;
+  cursor: pointer;
+}
+
+/* second nav */
+
+/* .material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 200, "opsz" 40;
+} */

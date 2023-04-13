@@ -1,0 +1,10 @@
+.topIcons {
+  display: flex;
+  justify-content: end;
+  margin-top: 5px;
+}
+.topIcons span {
+  opacity: 0.5;
+  cursor: pointer;
+  padding: 12px;
+}

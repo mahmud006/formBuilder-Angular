@@ -1,0 +1,12 @@
+.functionalityBtns {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.fnBtn {
+  margin-right: 20px;
+}
+.fnBtn .material-symbols-outlined {
+  margin-top: 20px;
+  opacity: 0.6;
+}

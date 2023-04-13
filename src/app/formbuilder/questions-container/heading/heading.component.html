@@ -1,0 +1,30 @@
+<!-- <div class="container">
+  <div class="header">
+    <div class="head">
+      <span>Untitled form</span>
+    </div>
+    <div class="desc">
+      <span>Description</span>
+    </div>
+  </div>
+</div> -->
+<div class="container">
+  <div class="header" (click)="showInputs()" (click)="onClick($event)">
+    <div class="head">
+      <span *ngIf="!showingInputs">{{ title }}</span>
+
+      <mat-form-field class="example-full-width" *ngIf="showingInputs">
+        <span matSuffix class="material-symbols-outlined upload">
+          save_as
+        </span>
+        <input matInput type="text" [(ngModel)]="title" autofocus />
+      </mat-form-field>
+    </div>
+    <div class="desc">
+      <span *ngIf="!showingInputs">{{ description }}</span>
+      <mat-form-field class="example-full-width" *ngIf="showingInputs">
+        <input matInput type="text" [(ngModel)]="description" />
+      </mat-form-field>
+    </div>
+  </div>
+</div>
