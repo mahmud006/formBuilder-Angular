@@ -20,6 +20,5 @@ export class DisplayTextComponent {
   }
   itemEvent() {
     this.clicked = true;
-    console.log('hlwwwwwwwww sajib vai');
   }
 }

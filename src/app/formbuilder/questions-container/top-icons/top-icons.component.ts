@@ -23,6 +23,9 @@ export class TopIconsComponent {
       this.mainService.questionId--;
     } else {
       this.btnHandler.showMcqForm = false;
+      this.btnHandler.showTextForm = false;
+      this.btnHandler.showRatingForm = false;
+      this.btnHandler.showDateForm = false;
     }
   }
 }

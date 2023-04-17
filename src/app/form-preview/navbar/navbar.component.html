@@ -1,0 +1,23 @@
+<div class="container">
+  <mat-toolbar style="background-color: #ffffff">
+    <button class="backBtn" (click)="onClickBack()">
+      <span class="material-symbols-outlined"> arrow_back </span>
+      <span style="margin-top: 15px"><h3>Back</h3> </span>
+    </button>
+    <span class="example-spacer"></span>
+    <mat-tab-group>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <span class="material-symbols-outlined"> computer </span>
+          Computer
+        </ng-template>
+      </mat-tab>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <span class="material-symbols-outlined"> phone_iphone </span>
+          Mobile
+        </ng-template>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-toolbar>
+</div>

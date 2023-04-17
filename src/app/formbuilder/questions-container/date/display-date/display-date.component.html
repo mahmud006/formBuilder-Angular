@@ -1,6 +1,12 @@
-<div class="questions">
+<div
+  class="questions"
+  (click)="edit($event); $event.stopPropagation()"
+  *ngIf="!clicked"
+>
   <div class="ques">
-    <label id="example-radio-group-label">1. Question</label>
+    <label id="example-radio-group-label"
+      >{{ ques?.questionId }}. {{ ques?.question }}</label
+    >
     <div class="answer">
       <mat-form-field class="example-full-width">
         <span matSuffix class="material-symbols-outlined upload">
@@ -16,3 +22,5 @@
     </div>
   </div>
 </div>
+<app-date *ngIf="clicked" (newItemEvent)="itemEvent()" [ques]="ques">
+</app-date>

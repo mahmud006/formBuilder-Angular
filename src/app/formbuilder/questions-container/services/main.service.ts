@@ -5,28 +5,49 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class MainService {
   public formData: any[] = [];
-  public questionId: any = 1;
-  constructor() {}
+  public heading = { head: 'Untitled form', desc: 'Description' };
+  stringified = localStorage.getItem('formData');
 
+  public questionId: any = 1;
+  constructor() {
+    this.formData = this.stringified ? JSON.parse(this.stringified) : [];
+    this.questionId = this.formData.length + 1;
+  }
+  addHeadingData(title: string, description: string) {
+    this.heading = { head: title, desc: description };
+  }
   addFormData(
     question: string,
     questionId: Number,
     options: string[],
-    indicator: string
+    indicator: string,
+    selectedLevel: number,
+    selectedSymbol: string
   ) {
-    this.formData.push({ question, questionId, options, indicator });
+    this.formData.push({
+      question,
+      questionId,
+      options,
+      indicator,
+      selectedLevel,
+      selectedSymbol,
+    });
   }
   insertFormData(
     question: string,
     questionId: any,
     options: string[],
-    indicator: string
+    indicator: string,
+    selectedLevel: number,
+    selectedSymbol: string
   ) {
     this.formData.splice(questionId - 1, 1, {
       question,
       questionId,
       options,
       indicator,
+      selectedLevel,
+      selectedSymbol,
     });
   }
   getFormData() {

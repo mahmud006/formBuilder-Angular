@@ -40,6 +40,17 @@ import { DisplayTextComponent } from './formbuilder/questions-container/text/dis
 import { DisplayRatingComponent } from './formbuilder/questions-container/rating/display-rating/display-rating.component';
 import { DisplayDateComponent } from './formbuilder/questions-container/date/display-date/display-date.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { Routes, RouterModule } from '@angular/router';
+import { NavbarComponent } from './form-preview/navbar/navbar.component';
+import { HeadComponent } from './form-preview/head/head.component';
+import { DisplayQuestionsComponent } from './form-preview/display-questions/display-questions.component';
+import { ShowMcqComponent } from './form-preview/show-mcq/show-mcq.component';
+import { ShowTextComponent } from './form-preview/show-text/show-text.component';
+import { ShowRatingComponent } from './form-preview/show-rating/show-rating.component';
+import { ShowDateComponent } from './form-preview/show-date/show-date.component';
+import { MAT_RADIO_DEFAULT_OPTIONS } from '@angular/material/radio';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,6 +71,13 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     DisplayTextComponent,
     DisplayRatingComponent,
     DisplayDateComponent,
+    NavbarComponent,
+    HeadComponent,
+    DisplayQuestionsComponent,
+    ShowMcqComponent,
+    ShowTextComponent,
+    ShowRatingComponent,
+    ShowDateComponent,
   ],
   imports: [
     BrowserModule,
@@ -83,8 +101,15 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     MatSlideToggleModule,
     MatDividerModule,
     DragDropModule,
+    MatNativeDateModule,
+    MatDatepickerModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: MAT_RADIO_DEFAULT_OPTIONS,
+      useValue: { color: 'primary' },
+    },
+  ],
   bootstrap: [AppComponent],
   exports: [MatGridListModule],
 })

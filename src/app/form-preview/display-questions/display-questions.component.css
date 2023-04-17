@@ -1,0 +1,22 @@
+.spacer {
+  line-height: 20px;
+  min-height: 50px;
+}
+.container {
+  background-color: rgb(230, 241, 241);
+  min-height: 632px;
+  max-width: 850px;
+  padding-bottom: 34px;
+  margin: 0 auto;
+}
+
+.submitBtn {
+  color: rgb(255, 255, 255) !important;
+  background-color: rgb(3, 120, 124) !important;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 55px;
+  font-size: 14px;
+}

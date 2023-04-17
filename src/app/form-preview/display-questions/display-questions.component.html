@@ -1,0 +1,18 @@
+<div class="spacer"></div>
+<div class="container">
+  <!-- <app-heading></app-heading> -->
+  <app-head></app-head>
+  <div
+    class="displayQuestionsContainer"
+    *ngFor="let ques of mainService.formData; let i = index"
+  >
+    <app-show-mcq *ngIf="ques.indicator == 'mcq'" [ques]="ques"> </app-show-mcq>
+    <app-show-text *ngIf="ques.indicator == 'text'" [ques]="ques">
+    </app-show-text>
+    <app-show-rating *ngIf="ques.indicator == 'rating'" [ques]="ques">
+    </app-show-rating>
+    <app-show-date *ngIf="ques.indicator == 'date'" [ques]="ques">
+    </app-show-date>
+  </div>
+  <button mat-flat-button class="submitBtn">Submit</button>
+</div>

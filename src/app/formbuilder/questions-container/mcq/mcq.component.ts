@@ -45,7 +45,9 @@ export class McqComponent implements OnInit {
           this.question,
           this.mainService.questionId++,
           this.options,
-          'mcq'
+          'mcq',
+          0,
+          ''
         );
         this.question = 'Question';
         this.options = ['Option1', 'Option2'];
@@ -56,7 +58,9 @@ export class McqComponent implements OnInit {
           this.question,
           this.ques.questionId,
           this.options,
-          'mcq'
+          'mcq',
+          0,
+          ''
         );
         this.newItemEvent.emit();
       }

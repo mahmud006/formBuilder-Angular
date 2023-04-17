@@ -1,0 +1,45 @@
+.container {
+  /* width: 100%;
+  max-width: 850px;
+  text-align: center;
+  font-size: 17px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto; */
+  /* padding: 0 300px 0 300px; */
+  background-color: rgb(255, 255, 255);
+}
+mat-toolbar {
+  height: 44px;
+  font-size: 14px;
+  /* padding: 0 350px 0 350px; */
+  display: flex;
+  justify-content: space-between;
+  /* max-width: 850px; */
+  width: 100%;
+  max-width: 850px;
+  text-align: center;
+  font-size: 17px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+.material-symbols-outlined {
+  margin-right: 8px;
+}
+button {
+  border: none;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  height: 44px;
+  cursor: pointer;
+  /* margin-left: 310px; */
+}

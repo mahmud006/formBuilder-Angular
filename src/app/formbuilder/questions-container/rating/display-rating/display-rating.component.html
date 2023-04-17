@@ -1,14 +1,27 @@
-<div class="questions">
+<div
+  class="questions"
+  (click)="edit($event); $event.stopPropagation()"
+  *ngIf="!clicked"
+  (mouseenter)="applied = true"
+  (mouseleave)="applied = false"
+>
   <div class="ques">
-    <label id="example-radio-group-label">1. Question</label>
+    <label id="example-radio-group-label"
+      >{{ ques?.questionId }}. {{ ques?.question }}</label
+    >
     <div class="answer">
       <div class="stars">
-        <span class="material-symbols-rounded"> star </span>
-        <span class="material-symbols-rounded"> star </span>
-        <span class="material-symbols-rounded"> star </span>
-        <span class="material-symbols-rounded"> star </span>
-        <span class="material-symbols-rounded"> star </span>
+        <button
+          [ngClass]="{ changeBack: applied }"
+          *ngFor="let i of [].constructor(+ques?.selectedLevel)"
+        >
+          <span class="material-symbols-rounded">{{
+            ques?.selectedSymbol
+          }}</span>
+        </button>
       </div>
     </div>
   </div>
 </div>
+<app-rating *ngIf="clicked" (newItemEvent)="itemEvent()" [ques]="ques">
+</app-rating>

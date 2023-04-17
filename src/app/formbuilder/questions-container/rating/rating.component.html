@@ -1,17 +1,25 @@
 <div class="questions">
-  <app-top-icons></app-top-icons>
+  <app-top-icons [ques]="ques"></app-top-icons>
   <form class="question">
     <div class="ques">
-      <h2 style="margin: 0 30px 0 30px">1.</h2>
+      <h2 style="margin: 0 30px 0 30px">
+        {{ ques?.questionId || mainService.questionId }}.
+      </h2>
       <mat-form-field class="example-full-width">
         <span matSuffix class="material-symbols-outlined upload">
           save_as
         </span>
-        <input matInput placeholder="Enter your question" value="Question" />
+        <input
+          matInput
+          placeholder="Enter your question"
+          [(ngModel)]="question"
+          (ngModelChange)="question = $event"
+          name="ques"
+        />
       </mat-form-field>
     </div>
     <div class="stars">
-      <button *ngFor="let i of [].constructor(selectedLevel)">
+      <button *ngFor="let i of [].constructor(+selectedLevel)">
         <span class="material-symbols-rounded">{{ selectedSymbol }}</span>
       </button>
     </div>
@@ -19,23 +27,30 @@
       <p>Levels:</p>
       <div class="levels">
         <mat-form-field appearance="fill">
-          <!-- <mat-label>level</mat-label> -->
-          <mat-select [(value)]="selectedLevel">
-            <mat-option *ngFor="let level of levels" [value]="level.value">
+          <mat-label>Level</mat-label>
+          <select
+            matNativeControl
+            [(ngModel)]="selectedLevel"
+            name="selectedLevel"
+          >
+            <option *ngFor="let level of levels" [value]="level.value">
               {{ level.viewValue }}
-            </mat-option>
-          </mat-select>
+            </option>
+          </select>
         </mat-form-field>
       </div>
       <p class="symb">Symbol:</p>
       <div class="symbol">
         <mat-form-field appearance="fill">
-          <!-- <mat-label>symbol</mat-label> -->
-          <mat-select [(value)]="selectedSymbol">
-            <mat-option *ngFor="let symbol of symbols" [value]="symbol.value">
+          <select
+            matNativeControl
+            [(ngModel)]="selectedSymbol"
+            [ngModelOptions]="{ standalone: true }"
+          >
+            <option *ngFor="let symbol of symbols" [value]="symbol.value">
               {{ symbol.viewValue }}
-            </mat-option>
-          </mat-select>
+            </option>
+          </select>
         </mat-form-field>
       </div>
     </div>

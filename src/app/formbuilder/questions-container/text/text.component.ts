@@ -41,7 +41,9 @@ export class TextComponent {
           this.question,
           this.mainService.questionId++,
           [],
-          'text'
+          'text',
+          0,
+          ''
         );
         this.question = 'Question';
         this.btnHandler.showTextForm = false;
@@ -50,7 +52,9 @@ export class TextComponent {
           this.question,
           this.ques.questionId,
           [],
-          'text'
+          'text',
+          0,
+          ''
         );
         this.newItemEvent.emit();
       }

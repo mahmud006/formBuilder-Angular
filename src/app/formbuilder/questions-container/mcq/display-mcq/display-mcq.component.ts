@@ -18,10 +18,6 @@ export class DisplayMcqComponent {
   edit(event: MouseEvent) {
     event.stopPropagation();
     this.clicked = true;
-
-    // const element = event.target as HTMLElement;
-    // const labelElement = element.closest('div')?.querySelector('label');
-    // console.log(labelElement?.textContent?.[0]);
   }
   itemEvent() {
     this.clicked = true;

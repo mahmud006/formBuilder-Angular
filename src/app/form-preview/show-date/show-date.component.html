@@ -1,0 +1,21 @@
+<div class="questions">
+  <div class="ques">
+    <label id="example-radio-group-label"
+      >{{ ques?.questionId }}. {{ ques?.question }}</label
+    >
+    <div class="answer">
+      <mat-form-field class="example-full-width">
+        <!-- <span matSuffix class="material-symbols-outlined upload">
+          calendar_month
+        </span> -->
+        <input
+          matInput
+          [matDatepicker]="picker"
+          placeholder="Please input date (M/d/yyyy)"
+        />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+  </div>
+</div>

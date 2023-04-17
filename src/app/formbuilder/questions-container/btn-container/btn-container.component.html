@@ -29,13 +29,19 @@
             <span class="add">Text</span>
           </div>
         </button>
-        <button mat-flat-button (click)="btnHandler.showRatingForm = true">
+        <button
+          mat-flat-button
+          (click)="$event.stopPropagation(); btnHandler.showRatingForm = true"
+        >
           <div class="container">
             <span class="material-symbols-outlined"> thumb_up </span>
             <span class="add">Rating</span>
           </div>
         </button>
-        <button mat-flat-button (click)="btnHandler.showDateForm = true">
+        <button
+          mat-flat-button
+          (click)="$event.stopPropagation(); btnHandler.showDateForm = true"
+        >
           <div class="container">
             <span class="material-symbols-outlined"> calendar_month </span>
             <span class="add">Date</span>

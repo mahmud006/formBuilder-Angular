@@ -1,13 +1,21 @@
 <div class="questions">
-  <app-top-icons></app-top-icons>
+  <app-top-icons [ques]="ques"></app-top-icons>
   <form class="question">
     <div class="ques">
-      <h2 style="margin: 0 30px 0 30px">1.</h2>
+      <h2 style="margin: 0 30px 0 30px">
+        {{ ques?.questionId || mainService.questionId }}.
+      </h2>
       <mat-form-field class="example-full-width">
         <span matSuffix class="material-symbols-outlined upload">
           save_as
         </span>
-        <input matInput placeholder="Enter your question" value="Question" />
+        <input
+          matInput
+          placeholder="Enter your question"
+          [(ngModel)]="question"
+          (ngModelChange)="question = $event"
+          name="ques"
+        />
       </mat-form-field>
     </div>
     <div class="answer">

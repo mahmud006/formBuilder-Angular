@@ -1,0 +1,20 @@
+<div class="questions">
+  <div class="ques">
+    <!-- <h3>{{ ques?.questionId }}</h3> -->
+    <label id="example-radio-group-label">
+      {{ ques?.questionId }}. {{ ques?.question }}
+    </label>
+    <mat-radio-group
+      aria-labelledby="example-radio-group-label"
+      class="example-radio-group"
+    >
+      <mat-radio-button
+        class="example-radio-button"
+        *ngFor="let option of ques?.options"
+        [value]="option"
+      >
+        {{ option }}
+      </mat-radio-button>
+    </mat-radio-group>
+  </div>
+</div>

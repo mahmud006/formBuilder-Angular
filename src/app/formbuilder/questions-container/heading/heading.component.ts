@@ -1,24 +1,17 @@
-import {
-  Component,
-  Input,
-  Output,
-  EventEmitter,
-  HostListener,
-  ViewChild,
-  ElementRef,
-  OnInit,
-  OnDestroy,
-} from '@angular/core';
-
+import { Component, HostListener, ElementRef } from '@angular/core';
+import { MainService } from '../services/main.service';
 @Component({
   selector: 'app-heading',
   templateUrl: './heading.component.html',
   styleUrls: ['./heading.component.css'],
 })
 export class HeadingComponent {
-  constructor(private elementRef: ElementRef) {}
-  title = 'Untitled form';
-  description = 'Description';
+  constructor(
+    private elementRef: ElementRef,
+    public mainService: MainService
+  ) {}
+  title = this.mainService.heading.head || 'Untitled form';
+  description = this.mainService.heading.desc || 'Description';
   showingInputs = false;
 
   showInputs() {
@@ -36,6 +29,7 @@ export class HeadingComponent {
         targetElement
       )
     ) {
+      this.mainService.addHeadingData(this.title, this.description);
       this.showingInputs = false;
     }
   }

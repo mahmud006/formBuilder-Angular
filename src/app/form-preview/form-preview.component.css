@@ -1,0 +1,16 @@
+.container {
+  height: 400px;
+  width: 500px;
+  background-color: red;
+}
+.formContainer {
+  background: url(https://cdn.forms.office.net/forms/images/aio/wave-pattern-v1.svg)
+      center top / cover no-repeat fixed,
+    linear-gradient(
+      180deg,
+      rgba(3, 120, 124, 0.2) 0%,
+      rgba(3, 120, 124, 0.8) 100%
+    );
+  overflow: scroll;
+  height: 100%;
+}

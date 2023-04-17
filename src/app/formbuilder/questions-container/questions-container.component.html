@@ -19,10 +19,21 @@
         (click)="edit()"
       >
       </app-display-text>
+      <app-display-rating
+        *ngIf="ques.indicator == 'rating'"
+        [ques]="ques"
+        (click)="edit()"
+      >
+      </app-display-rating>
+      <app-display-date
+        *ngIf="ques.indicator == 'date'"
+        [ques]="ques"
+        (click)="edit()"
+      >
+      </app-display-date>
     </div>
   </div>
   <app-mcq *ngIf="btnHandler.showMcqForm"> </app-mcq>
-
   <app-display-mcq style="display: none"></app-display-mcq>
 
   <app-text *ngIf="btnHandler.showTextForm"></app-text>

@@ -1,0 +1,16 @@
+<div class="questions">
+  <div class="ques">
+    <label id="example-radio-group-label"
+      >{{ ques?.questionId }}. {{ ques?.question }}</label
+    >
+    <div class="answer">
+      <div class="stars">
+        <button *ngFor="let i of [].constructor(+ques?.selectedLevel)">
+          <span class="material-symbols-rounded">{{
+            ques?.selectedSymbol
+          }}</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
