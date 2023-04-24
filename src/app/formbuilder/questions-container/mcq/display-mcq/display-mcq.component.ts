@@ -21,6 +21,5 @@ export class DisplayMcqComponent {
   }
   itemEvent() {
     this.clicked = true;
-    console.log('hlwwwwwwwww sajib vai');
   }
 }

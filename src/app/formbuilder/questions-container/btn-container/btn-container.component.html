@@ -1,17 +1,18 @@
 <div class="btnContainer">
-  <button mat-flat-button class="addBtn" [ngClass]="{ expanded: isClicked }">
+  <button
+    mat-flat-button
+    class="addBtn"
+    [ngClass]="{ expanded: isClicked }"
+    (click)="isClicked = !isClicked"
+  >
     <div class="container">
-      <span class="material-symbols-outlined" (click)="isClicked = !isClicked">
-        add
-      </span>
-      <span class="add" *ngIf="!isClicked" (click)="isClicked = !isClicked"
-        >Add new</span
-      >
+      <span class="material-symbols-outlined"> add </span>
+      <span class="add" *ngIf="!isClicked">Add new</span>
 
       <div class="btns" *ngIf="isClicked">
         <button
           mat-flat-button
-          (click)="$event.stopPropagation(); btnHandler.showMcqForm = true"
+          (click)="$event.stopPropagation(); showForm($event)"
         >
           <div class="container">
             <span class="material-symbols-outlined">
@@ -22,7 +23,11 @@
         </button>
         <button
           mat-flat-button
-          (click)="$event.stopPropagation(); btnHandler.showTextForm = true"
+          (click)="
+            $event.stopPropagation();
+            btnHandler.showTextForm = true;
+            this.isClicked = !this.isClicked
+          "
         >
           <div class="container">
             <span class="material-symbols-outlined"> title </span>
@@ -31,7 +36,11 @@
         </button>
         <button
           mat-flat-button
-          (click)="$event.stopPropagation(); btnHandler.showRatingForm = true"
+          (click)="
+            $event.stopPropagation();
+            btnHandler.showRatingForm = true;
+            this.isClicked = !this.isClicked
+          "
         >
           <div class="container">
             <span class="material-symbols-outlined"> thumb_up </span>
@@ -40,14 +49,23 @@
         </button>
         <button
           mat-flat-button
-          (click)="$event.stopPropagation(); btnHandler.showDateForm = true"
+          (click)="
+            $event.stopPropagation();
+            btnHandler.showDateForm = true;
+            this.isClicked = !this.isClicked
+          "
         >
           <div class="container">
             <span class="material-symbols-outlined"> calendar_month </span>
             <span class="add">Date</span>
           </div>
         </button>
-        <button mat-flat-button [matMenuTriggerFor]="menu" class="expand">
+        <button
+          mat-flat-button
+          [matMenuTriggerFor]="menu"
+          class="expand"
+          (click)="$event.stopPropagation()"
+        >
           <span class="material-symbols-outlined"> expand_more </span>
           <div class="options">
             <mat-menu #menu="matMenu" class="menu">

@@ -7,11 +7,13 @@ import { MainService } from './formbuilder/questions-container/services/main.ser
 })
 export class AppComponent {
   title = 'formBuilder';
-  // onClick(event: any) {}
   constructor(public mainService: MainService) {}
   @HostListener('window:beforeunload', ['$event'])
   beforeUnloadHandler($event: any) {
-    //add formData in localstorage
     localStorage.setItem('formData', JSON.stringify(this.mainService.formData));
+    localStorage.setItem(
+      'formHeading',
+      JSON.stringify(this.mainService.heading)
+    );
   }
 }

@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './formbuilder.component.html',
   styleUrls: ['./formbuilder.component.css'],
 })
-export class FormbuilderComponent {
-  onParentClick(event: any) {}
-}
+export class FormbuilderComponent {}

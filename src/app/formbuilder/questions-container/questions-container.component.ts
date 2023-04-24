@@ -15,7 +15,8 @@ export class QuestionsContainerComponent {
     public btnHandler: BtnHandlerService
   ) {}
   edit() {
-    this.isClicked = true;
+    // this.isClicked = true;
+    console.log('hlw3');
   }
   drop(event: CdkDragDrop<string[]>) {
     moveItemInArray(

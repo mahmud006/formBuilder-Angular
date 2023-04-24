@@ -1,17 +1,20 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+
 @Injectable({
   providedIn: 'root',
 })
 export class MainService {
   public formData: any[] = [];
-  public heading = { head: 'Untitled form', desc: 'Description' };
+  public heading = { head: '', desc: '' };
   stringified = localStorage.getItem('formData');
-
+  stringifiedHeading = localStorage.getItem('formHeading');
   public questionId: any = 1;
   constructor() {
     this.formData = this.stringified ? JSON.parse(this.stringified) : [];
     this.questionId = this.formData.length + 1;
+    this.heading = this.stringifiedHeading
+      ? JSON.parse(this.stringifiedHeading)
+      : [];
   }
   addHeadingData(title: string, description: string) {
     this.heading = { head: title, desc: description };

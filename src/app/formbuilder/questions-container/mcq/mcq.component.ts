@@ -18,12 +18,11 @@ import { MainService } from '../services/main.service';
 export class McqComponent implements OnInit {
   @Input() ques: any;
   @Output() newItemEvent = new EventEmitter<string>();
+
   question: string = 'Question';
   questionId: any = 1;
   options: string[] = ['Option 1', 'Option 2'];
   optionNo: any = 3;
-  showMcqForm = false;
-  showEditForm = false;
   constructor(
     public btnHandler: BtnHandlerService,
     private elementRef: ElementRef,
@@ -38,9 +37,9 @@ export class McqComponent implements OnInit {
   onDocumentClick(event: MouseEvent) {
     event.stopPropagation();
     const targetElement = event.target as HTMLElement;
-
+    console.log(targetElement);
     if (!this.elementRef.nativeElement.contains(targetElement)) {
-      if (this.btnHandler.showMcqForm === true && !this.ques) {
+      if (!this.ques) {
         this.mainService.addFormData(
           this.question,
           this.mainService.questionId++,
@@ -63,6 +62,7 @@ export class McqComponent implements OnInit {
           ''
         );
         this.newItemEvent.emit();
+        console.log('hlw');
       }
     }
   }
